@@ -1,0 +1,1 @@
+openssl genrsa -out adam.key 2048
