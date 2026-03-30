@@ -16,6 +16,13 @@ spec:
         image: nginx
         ports:
         - containerPort: 80
+        volumeMounts:
+        - name: nginx-volume
+          mountPath: /var/www/html
+      volumes:
+      - name: nginx-volume
+        persistentVolumeClaim:
+          claimName: local-pvc
   replicas: 3
   selector: 
     matchLabels: 
