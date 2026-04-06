@@ -1,0 +1,4 @@
+resources:
+- config.yaml
+- deploy.yaml
+- svc.yaml

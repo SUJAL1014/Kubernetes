@@ -1,0 +1,4 @@
+resources:
+- config.yml
+- deploy.yml
+- svc.yml  
