@@ -1,0 +1,8 @@
+resources:
+- deployment.yml
+- service.yml
+
+configMapGenerator:
+- name: nginx-config
+  files:
+  - index.html
