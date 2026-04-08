@@ -1,0 +1,28 @@
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: high-priority
+value: 100000000
+#preemptionPolicy: Never
+globalDefault: false
+description: "Critical production workload that must preempt lower priority workloads if needed"
+
+
+---
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: medium-priority
+value: 100
+globalDefault: false
+description: "Important workload that should be scheduled before lower priority workloads"
+
+
+---
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: low-priority
+value: 10
+globalDefault: true
+description: "Non-critical workload that can be scheduled after higher priority workloads"
